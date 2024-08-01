@@ -1,12 +1,15 @@
 package com.example.desafioitau.domain.transaction;
 
+import lombok.*;
+
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Transaction {
-    private Long id;
-    private String sender;
-    private String receiver;
     private BigDecimal amount;
     private Timestamp dateTime;
 }
