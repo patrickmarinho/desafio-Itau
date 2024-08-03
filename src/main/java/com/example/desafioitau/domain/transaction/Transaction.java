@@ -1,8 +1,6 @@
 package com.example.desafioitau.domain.transaction;
 
 import lombok.*;
-
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 @Getter
@@ -10,6 +8,6 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Transaction {
-    private BigDecimal amount;
+    private Float amount;
     private Timestamp dateTime;
 }
