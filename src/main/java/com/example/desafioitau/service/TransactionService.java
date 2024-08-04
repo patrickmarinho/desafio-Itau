@@ -7,9 +7,7 @@ import com.example.desafioitau.repository.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.Timestamp;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 @Service
 public class TransactionService {
@@ -18,16 +16,25 @@ public class TransactionService {
 
     //POST
     public Transaction newTransaction(Transaction transaction){
+
+        OffsetDateTime currentNow = OffsetDateTime.now();
+        if (transaction.getAmount() == null ||
+                transaction.getDateTime() == null ||
+                transaction.getDateTime().isAfter(currentNow)) {
+            throw new InvalidRequestException();
+        }
+
         if(transaction.getAmount() <= 0){
             throw new UnprocessableEntityException();
         }
 
-        LocalDateTime currentDate = LocalDateTime.now();
-        if(transaction.getDateTime().after(Timestamp.valueOf(currentDate))){
-            throw new InvalidRequestException();
-        }
-
         transactionRepository.addTransaction(transaction);
         return transaction;
+    }
+
+    //Delete
+    public void deleteTransaction(){
+        transactionRepository.deleteTransactions();
+        return;
     }
 }
