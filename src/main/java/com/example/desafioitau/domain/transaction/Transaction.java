@@ -1,7 +1,7 @@
 package com.example.desafioitau.domain.transaction;
 
 import lombok.*;
-import java.sql.Timestamp;
+import java.time.OffsetDateTime;
 
 @Getter
 @Setter
@@ -9,5 +9,5 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 public class Transaction {
     private Float amount;
-    private Timestamp dateTime;
+    private OffsetDateTime dateTime;
 }
