@@ -17,7 +17,7 @@ Este projeto consiste em uma API RESTful desenvolvida em Java com Spring Boot. A
 - [Lombok](https://projectlombok.org/)
 - [Maven](https://maven.apache.org/)
 
-## Instalação
+## Instalação via Repositório
 1. Clone o repositório:
 
 ```bash
@@ -30,6 +30,23 @@ git clone https://github.com/patrickmarinho/desafio-Itau.git
 1. Inicie a aplicação com o Maven
 
 2. A API vai estar acessível em http://localhost:8080/
+
+
+## Instalação via Docker
+1. Certifique-se que o Docker está instalado em sua máquina. Caso não esteja você pode baixa-lo aqui: [Docker](https://www.docker.com)
+2. Baixe a imagem do Docker Hub.
+
+```bash
+docker pull 01patrick/desafioitau
+```
+
+## Execução
+1. Execute a aplicação
+```bash
+docker run -p 8080:8080 01patrick/desafioitau:1.0
+```
+2. A API vai estar acessível em http://localhost:8080/
+
 
 ## Endpoints da API
 
