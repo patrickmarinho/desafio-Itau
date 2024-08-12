@@ -5,7 +5,7 @@
 ## Índice
 - [Visão Geral](#visão-geral)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Instalação](#instalação)
+- [Instalação](#instalação-via-repositório)
 - [Execução](#execução)
 - [Endpoints da API](#endpoints-da-api)
 
@@ -16,6 +16,7 @@ Este projeto consiste em uma API RESTful desenvolvida em Java com Spring Boot. A
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Lombok](https://projectlombok.org/)
 - [Maven](https://maven.apache.org/)
+- [Docker](https://www.docker.com)
 
 ## Instalação via Repositório
 1. Clone o repositório:
